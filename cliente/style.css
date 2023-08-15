@@ -2,10 +2,17 @@
     margin: 0;
     padding: 0;
 }
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #FFF8DE;
+}
 nav{
     width: 100%;
     height: 85px;
-    background-color: aquamarine;
+    background-color: #D6E8DB;
     display: flex;
     justify-content: end;
     align-items: center;
@@ -16,4 +23,75 @@ nav li{
 }
 nav a{
     text-decoration: none;
+    font-size: 20px;
+    color: black;
+    padding: 20px;
+    margin-right: 30px;
+}
+nav img{
+    width: 45px;
+    height: 45px;
+    margin-right: 1350px;
+}
+.cuadro-exotic{
+    width: 100%;
+    height: 450px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #C1D0B5   ;
+    margin-top: 45px;
+}
+.cuadro  {
+    display: flex;
+    background-color: bisque;
+    width: 400px;
+    height: 400px;
+    margin-left: 200px;
+}
+.texto{
+    width: 450px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 500px;
+}
+.texto h2{
+    font-size: 35px;
+}
+.texto p{
+    font-size: 25px;
+}
+.caudros{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.info{
+    width: 350px;
+    height: 250px;
+    background-color: #D6E8DB;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+}
+.imagen{
+    width: 150px;
+    height: 150px;
+    margin-top: 5px;
+}
+.imagen img{
+    width: 150px;
+    height: 150px;
+}
+.info p{
+    font-size: 25px;
+    margin-top: 25px;
 }
