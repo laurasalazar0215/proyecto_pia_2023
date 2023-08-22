@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #FFF8DE;
+}
+/**/
+nav{
+    width: 1249px;
+    height: 70px;
+    background-color:  #D6E8DB;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px 0px 50px;
+}
+nav img{
+    width: 40px;
+    height: 40px;
+}
+nav ul{
+    list-style: none;
+    margin-left: 1100px;
+}
+nav a{
+    font-size: 20px;
+    margin: 5px;
+    color: black;
+}
+.cont-menu{
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 70px;
+    padding-top: 35px;
+    justify-content: flex-start;
+    align-items: center;
+    transition: all 0.5s;
+    gap: 20px;
+    background-color:  #D6E8DB;
+    width: 190px;
+    height: 270px;
+    overflow: hidden;
+}
+.cont-menu li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.cont-menu li a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    margin-top: 30px;
+}
+input{
+    appearance: none;
+    background-image: url('../img/icons8-menu-50.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+input:checked ~.cont-menu{
+    display: block;
+}
+
+/**/
+.cuadro-exotic{
+    width: 100%;
+    height: 450px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #C1D0B5   ;
+    margin-top: 45px;
+}
+.cuadro  {
+    display: flex;
+    background-color: bisque;
+    width: 400px;
+    height: 400px;
+    margin-left: 100px;
+}
+.texto{
+    width: 450px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 200px;
+}
+.texto h2{
+    font-size: 30px;
+    margin-top: -40px;
+}
+.texto p{
+    font-size: 20px;
+    margin-top: 40px;
+}
+.caudros{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.info{
+    width: 350px;
+    height: 250px;
+    background-color: #D6E8DB;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+}
+.imagen{
+    width: 150px;
+    height: 150px;
+    margin-top: 5px;
+}
+.imagen img{
+    width: 150px;
+    height: 150px;
+}
+.info p{
+    font-size: 25px;
+    margin-top: 25px;
+}
+.cuadros_2{
+    width: 100%;
+    height: 400px;
+    background-color: #FFF8DE;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.contenidos{
+    width: 500px;
+    height: 220px;
+    background-color: #D6E8DB;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 50px;
+}
+.cuadros_2 img{
+    width: 200px;
+    height: 200px;
+    padding: 40px;
+}
+.cuadros_2 h5{
+    font-size: 20px;
+}
+footer{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D6E8DB;
+}
+.exotic i{
+    color: black;
+    font-size: 40px;
+    margin: 20px;
+}
