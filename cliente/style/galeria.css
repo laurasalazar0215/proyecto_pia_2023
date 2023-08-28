@@ -88,7 +88,7 @@ input:checked~.cont-menu {
 .cuadro {
     width: 100%;
     height: 80px;
-    background-color: #C1D0B5;
+    background-color: #67e600;
     display: flex;
     justify-content: center;
     align-items: center;

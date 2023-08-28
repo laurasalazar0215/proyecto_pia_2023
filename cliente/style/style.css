@@ -82,12 +82,12 @@ input:checked ~.cont-menu{
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: #C1D0B5   ;
+    background-color: #C1D0B5  ;
     margin-top: 45px;
 }
 .cuadro  {
     display: flex;
-    background-color: bisque;
+   
     width: 400px;
     height: 400px;
     margin-left: 100px;
