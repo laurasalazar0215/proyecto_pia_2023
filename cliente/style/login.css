@@ -13,7 +13,7 @@ body {
 
 /**/
 nav {
-    width: 100%;
+    width: 1820px;
     height: 70px;
     background-color: #D6E8DB;
     display: flex;
@@ -29,7 +29,7 @@ nav img {
 
 nav ul {
     list-style: none;
-    margin-left: 1100px;
+    margin-left: 1650px;
 }
 
 nav a {
