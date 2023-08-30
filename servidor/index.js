@@ -19,7 +19,7 @@ const db = mysql.createConnection({
 
 //usuarios datos
 
-app.get('/',(req, res)=>{
+app.get('/datos',(req, res)=>{
     db.query('select * from usuarios_registro',
   (err,result) =>{
     if(err)console.log(err)
@@ -32,7 +32,7 @@ app.get('/',(req, res)=>{
     
 })
 
-app.post('/crear', (req,res)=>{
+app.post('/crearusuario', (req,res)=>{
     const Id_usuario = req.body.id;
     const Nombre = req.body.Nombre;
     const Apellidos = req.body.Apellidos;
@@ -51,7 +51,7 @@ db.query('INSERT INTO usuarios_registro VALUES (?,?,?,?,?,?,?)',[Id_usuario,Nomb
 }
 })
 
-app.put('/edit',(req,res)=>{
+app.put('/editusuario',(req,res)=>{
     const Id_usuario = req.body.id;
     const Nombre = req.body.Nombre;
     const Apellidos = req.body.Apellidos;
@@ -71,7 +71,7 @@ db.query('UPDATE usuarios_registro SET Nombre=?, Apellidos=?, Gmail=?,telefono=?
 
 //productos datos 
 
-app.get('/',(req, res)=>{
+app.get('/producto',(req, res)=>{
     db.query('select * from productos',
   (err,result) =>{
     if(err)console.log(err)
@@ -84,7 +84,7 @@ app.get('/',(req, res)=>{
     
 })
 
-app.post('/crear', (req,res)=>{
+app.post('/crear/:producto', (req,res)=>{
     const Id_producto = req.body.id;
     const Nombre = req.body.Nombre;
     const descripcion = req.body.descripcion;
@@ -103,7 +103,7 @@ db.query('INSERT INTO productos VALUES (?,?,?,?,?,?,?)',[Id_producto,Nombre,desc
 }
 })
 
-app.put('/edit',(req,res)=>{
+app.put('/edit/:producto',(req,res)=>{
     const Id_producto = req.body.id;
     const Nombre = req.body.nombre;
     const descripcion = req.body.descripcion;
@@ -137,7 +137,7 @@ else{
 
 //reservas 
 
-app.get('/',(req, res)=>{
+app.get('/reservas',(req, res)=>{
     db.query('select * from reservas',
   (err,result) =>{
     if(err)console.log(err)
@@ -149,7 +149,7 @@ app.get('/',(req, res)=>{
     )
     
 })
-app.post('/crear', (req,res)=>{
+app.post('/crear/:reserva', (req,res)=>{
     const Id_reserva = req.body.id;
     const Nombre_cliente = req.body.Nombre_cliente;
     const Fecha_hora = req.body.Fecha_hora;
@@ -166,7 +166,7 @@ db.query('INSERT INTO reservas VALUES (?,?,?,?,?)',[Id_reserva,Nombre_cliente,Fe
 }
 })
 
-app.put('/edit',(req,res)=>{
+app.put('/edit/:reserva',(req,res)=>{
     const Id_reserva = req.body.id;
     const Nombre_cliente = req.body.Nombre_cliente;
     const Fecha_hora = req.body.Fecha_hora;
@@ -198,7 +198,7 @@ else{
 
 //domicilios 
 
-app.get('/',(req, res)=>{
+app.get('/domicilios',(req, res)=>{
     db.query('select * from domicilios',
   (err,result) =>{
     if(err)console.log(err)
@@ -211,7 +211,7 @@ app.get('/',(req, res)=>{
     
 })
 
-app.post('/crear', (req,res)=>{
+app.post('/crear/:domicilio', (req,res)=>{
     const Id_domicilio = req.body.id;
     const Nombre_cliente = req.body.Nombre_cliente;
     const Dirreción = req.body.Dirreción;
@@ -231,7 +231,7 @@ db.query('INSERT INTO domicilios VALUES (?,?,?,?,?,?,?,?)',[Id_domicilio,Nombre_
 }
 })
 
-app.put('/edit',(req,res)=>{
+app.put('/edit/:domicili',(req,res)=>{
     const Id_domicilio = req.body.id;
     const Nombre_cliente = req.body.Nombre_cliente;
     const Dirreción = req.body.Dirreción;
