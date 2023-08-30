@@ -182,7 +182,7 @@ db.query('UPDATE reservas SET Nombre_cliente=?, Fecha_hora=?,Cantidad_personas=?
 }
 })
 
-app.delete('/delete/:id',(req,res)=>{
+app.delete('/delete/:id_reserva',(req,res)=>{
     const id = req.body.id;
 
     db.query('DELETE FROM reservas WHERE Id_reserva=?',id),
@@ -231,7 +231,7 @@ db.query('INSERT INTO domicilios VALUES (?,?,?,?,?,?,?,?)',[Id_domicilio,Nombre_
 }
 })
 
-app.put('/edit/:domicili',(req,res)=>{
+app.put('/edit/:domicilio',(req,res)=>{
     const Id_domicilio = req.body.id;
     const Nombre_cliente = req.body.Nombre_cliente;
     const Dirreción = req.body.Dirreción;
@@ -250,7 +250,7 @@ db.query('UPDATE domicilios  SET Id_domicilio=?,Nombre_cliente=?,Dirreción=?,Ve
 }
 })
 
-app.delete('/delete/:id',(req,res)=>{
+app.delete('/delete/:id_domicilio',(req,res)=>{
     const id = req.body.id;
 
     db.query('DELETE FROM domicilios WHERE Id_domicilio=?',id),
@@ -266,7 +266,7 @@ else{
 
 //compra 
 
-app.get('/',(req, res)=>{
+app.get('/compra',(req, res)=>{
     db.query('select * from compra ',
   (err,result) =>{
     if(err)console.log(err)
@@ -279,7 +279,7 @@ app.get('/',(req, res)=>{
     
 })
 
-app.post('/crear', (req,res)=>{
+app.post('/crear/:compra', (req,res)=>{
     const Id_compra = req.body.id;
     const cantidad_productos = req.body.cantidad_productos;
     const precio_final= req.body.precio_final;
@@ -296,7 +296,7 @@ db.query('INSERT INTO compra VALUES (?,?,?,?)',[Id_compra,cantidad_productos,pre
 }
 })
 
-app.delete('/delete/:id',(req,res)=>{
+app.delete('/delete/:idcompra',(req,res)=>{
     const id = req.body.id;
 
     db.query('DELETE FROM compra WHERE Id_domicilio=?',id),
