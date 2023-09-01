@@ -7,7 +7,7 @@ let url;
 
 /*etiquetas html*/
 
-const formulario = document.getElementById('form')
+const formulario = document.getElementById('formulario')
 const nombres = document.getElementById('nombres')
 const correo = document.getElementById('correo')
 const terminos = document.getElementById('terminos')
@@ -30,7 +30,7 @@ formulario.addEventListener('submit',(e)=>{
 
 const Get = async () =>{
     try{
-        const respuesta = await axios.get ('http://localhost:3006/')
+        const respuesta = await axios.get ('https://localhost:3006/')
         productos = respuesta.data 
         console.log(respuesta)
         Card(productos)
@@ -83,7 +83,7 @@ const Card =(productos) =>{
 
         console.log('estoy guardando')
 
-        axios.post ('http://localhost:3006/crear',{
+        axios.post ('https://localhost:3006/',{
 
         id_producto:id_producto,
         nombre:nombre,
@@ -96,5 +96,5 @@ const Card =(productos) =>{
             console.log('registro ok ')
 
         })
-
+        
     }
