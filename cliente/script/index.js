@@ -1,6 +1,7 @@
 /*variables*/
 
 let productos=[]
+let formularios;
 let id;
 let nombre;
 let url;
